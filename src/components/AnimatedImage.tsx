@@ -26,7 +26,7 @@ const AnimatedImage = ({
   const imgRef = useRef<HTMLImageElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Intersection Observer для проверки, находится ли изображение в поле зрения
+  // Используем Intersection Observer для определения видимости
   useEffect(() => {
     if (!containerRef.current) return;
     
@@ -38,7 +38,7 @@ const AnimatedImage = ({
         }
       },
       {
-        rootMargin: '200px',
+        rootMargin: '200px',  // Начинаем загрузку заранее
         threshold: 0.1
       }
     );
@@ -50,8 +50,10 @@ const AnimatedImage = ({
     };
   }, []);
 
-  // Предзагрузка изображения для предотвращения мигания
+  // Улучшенная предзагрузка изображения
   useEffect(() => {
+    if (!isInView) return; // Начинаем загрузку только когда элемент в зоне видимости
+    
     const img = new Image();
     img.src = src;
     img.onload = () => {
@@ -66,7 +68,7 @@ const AnimatedImage = ({
     return () => {
       img.onload = null;
     };
-  }, [src]);
+  }, [src, isInView]);
 
   // Определение класса соотношения сторон
   const aspectRatioClass = {
@@ -76,7 +78,7 @@ const AnimatedImage = ({
     portrait: "aspect-[3/4]"
   }[aspectRatio];
 
-  // Определение класса анимации - применяется только когда изображение в поле зрения
+  // Определение класса анимации - применяется только когда изображение в поле зрения и загружено
   const animationClass = isInView && isLoaded ? {
     fade: "animate-fade-in",
     zoom: "scale-[0.98] animate-zoom-in",
@@ -93,16 +95,19 @@ const AnimatedImage = ({
         className
       )}
     >
-      {/* Улучшенный скелетон-загрузчик */}
+      {/* Улучшенный скелетон-загрузчик с анимацией */}
       <div
         className={cn(
-          "absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200",
+          "absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900",
           isLoaded ? "opacity-0" : "opacity-100",
-          "transition-opacity duration-500 ease-in-out"
+          "transition-opacity duration-700 ease-in-out"
         )}
       >
         <div className="absolute inset-0 bg-shimmer animate-[shimmer_2s_infinite]" />
       </div>
+      
+      {/* Добавление элегантного оверлея при наведении */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       
       <img
         ref={imgRef}
@@ -111,16 +116,21 @@ const AnimatedImage = ({
         loading={priority ? "eager" : "lazy"}
         style={{ 
           animationDelay: `${delay}ms`,
+          transform: isLoaded ? 'none' : 'scale(1.05)',
         }}
         className={cn(
           "w-full h-full object-cover backface-hidden",
           animationClass,
-          "transition-all duration-700 ease-out"
+          "transition-all duration-1000 ease-out"
         )}
+        onLoad={() => setIsLoaded(true)}
       />
       
-      {/* Добавление элегантного оверлея при наведении */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      {/* Добавление декоративного элемента на углу изображения */}
+      <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      
+      {/* Декоративный индикатор в углу для премиум-ощущения */}
+      <div className="absolute bottom-0 left-0 w-8 h-8 bg-gradient-to-tr from-samsung-blue/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-tr-xl" />
     </div>
   );
 };
