@@ -122,6 +122,10 @@ export default {
 				'spin-slow': {
 					'0%': { transform: 'rotate(0deg)' },
 					'100%': { transform: 'rotate(360deg)' }
+				},
+				'shimmer': {
+					'0%': { backgroundPosition: '-500px 0' },
+					'100%': { backgroundPosition: '500px 0' }
 				}
 			},
 			animation: {
@@ -139,6 +143,9 @@ export default {
 			backdropBlur: {
 				xs: '2px',
 			},
+			backgroundImage: {
+				'shimmer': 'linear-gradient(to right, transparent 0%, rgba(255,255,255,0.2) 20%, transparent 40%)',
+			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

@@ -24,9 +24,11 @@ const AnimatedImage = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
+  // Intersection Observer для проверки, находится ли изображение в поле зрения
   useEffect(() => {
-    if (!imgRef.current) return;
+    if (!containerRef.current) return;
     
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -41,20 +43,32 @@ const AnimatedImage = ({
       }
     );
     
-    observer.observe(imgRef.current);
+    observer.observe(containerRef.current);
     
     return () => {
       observer.disconnect();
     };
   }, []);
 
-  // Handle preloaded images
+  // Предзагрузка изображения для предотвращения мигания
   useEffect(() => {
-    if (!imgRef.current) return;
-    if (imgRef.current.complete) setIsLoaded(true);
-  }, []);
+    const img = new Image();
+    img.src = src;
+    img.onload = () => {
+      setIsLoaded(true);
+    };
+    
+    // Проверка, если изображение уже в кэше
+    if (imgRef.current && imgRef.current.complete) {
+      setIsLoaded(true);
+    }
+    
+    return () => {
+      img.onload = null;
+    };
+  }, [src]);
 
-  // Determine aspect ratio class
+  // Определение класса соотношения сторон
   const aspectRatioClass = {
     auto: "aspect-auto",
     square: "aspect-square",
@@ -62,46 +76,51 @@ const AnimatedImage = ({
     portrait: "aspect-[3/4]"
   }[aspectRatio];
 
-  // Determine animation class - removed animation for first load to avoid flickering
-  const animationClass = isInView ? {
+  // Определение класса анимации - применяется только когда изображение в поле зрения
+  const animationClass = isInView && isLoaded ? {
     fade: "animate-fade-in",
-    zoom: "scale-95 animate-zoom-in",
+    zoom: "scale-[0.98] animate-zoom-in",
     slide: "translate-y-4 animate-slide-up",
     none: ""
-  }[animation] : "";
+  }[animation] : "opacity-0";
 
   return (
     <div 
+      ref={containerRef}
       className={cn(
-        "relative overflow-hidden will-change-transform",
+        "relative overflow-hidden rounded-xl will-change-transform",
         aspectRatioClass,
         className
       )}
     >
+      {/* Улучшенный скелетон-загрузчик */}
       <div
         className={cn(
-          "absolute inset-0 bg-gray-200 animate-pulse-soft",
+          "absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200",
           isLoaded ? "opacity-0" : "opacity-100",
-          "transition-opacity duration-300"
+          "transition-opacity duration-500 ease-in-out"
         )}
-      />
+      >
+        <div className="absolute inset-0 bg-shimmer animate-[shimmer_2s_infinite]" />
+      </div>
+      
       <img
         ref={imgRef}
         src={src}
         alt={alt}
         loading={priority ? "eager" : "lazy"}
-        onLoad={() => setIsLoaded(true)}
         style={{ 
           animationDelay: `${delay}ms`,
-          animationPlayState: isInView ? "running" : "paused" 
         }}
         className={cn(
           "w-full h-full object-cover backface-hidden",
-          isLoaded ? "opacity-100" : "opacity-0", 
           animationClass,
-          "transition-opacity duration-300"
+          "transition-all duration-700 ease-out"
         )}
       />
+      
+      {/* Добавление элегантного оверлея при наведении */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     </div>
   );
 };
