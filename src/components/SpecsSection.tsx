@@ -3,43 +3,43 @@ import { useState, useRef, useEffect } from 'react';
 
 const specs = [
   {
-    category: "Display",
+    category: "Дисплей",
     items: [
-      { name: "Technology", value: "Dynamic AMOLED 2X" },
-      { name: "Size", value: "6.8 inches" },
-      { name: "Resolution", value: "3200 x 1440 pixels" },
-      { name: "Refresh Rate", value: "120Hz adaptive" },
-      { name: "Protection", value: "Corning® Gorilla® Glass Victus®" }
+      { name: "Технология", value: "Dynamic AMOLED 2X" },
+      { name: "Размер", value: "6.8 дюймов" },
+      { name: "Разрешение", value: "3200 x 1440 пикселей" },
+      { name: "Частота обновления", value: "120Гц адаптивная" },
+      { name: "Защита", value: "Corning® Gorilla® Glass Victus®" }
     ]
   },
   {
-    category: "Performance",
+    category: "Производительность",
     items: [
-      { name: "Processor", value: "4nm Octa-core Processor" },
-      { name: "RAM", value: "12GB LPDDR5" },
-      { name: "Storage", value: "256GB / 512GB / 1TB" },
-      { name: "OS", value: "Android 13" },
+      { name: "Процессор", value: "4нм восьмиядерный процессор" },
+      { name: "ОЗУ", value: "12ГБ LPDDR5" },
+      { name: "Хранилище", value: "256ГБ / 512ГБ / 1ТБ" },
+      { name: "ОС", value: "Android 13" },
       { name: "GPU", value: "Adreno 740" }
     ]
   },
   {
-    category: "Camera",
+    category: "Камера",
     items: [
-      { name: "Main Camera", value: "108MP, f/1.8, OIS" },
-      { name: "Ultra Wide", value: "12MP, f/2.2, 120° FOV" },
-      { name: "Telephoto", value: "10MP, 3x optical zoom, OIS" },
-      { name: "Front Camera", value: "40MP, f/2.2, autofocus" },
-      { name: "Video", value: "8K@24fps, 4K@60fps, HDR10+" }
+      { name: "Основная камера", value: "108МП, f/1.8, OIS" },
+      { name: "Сверхширокоугольная", value: "12МП, f/2.2, угол 120°" },
+      { name: "Телефото", value: "10МП, 3x оптический зум, OIS" },
+      { name: "Фронтальная камера", value: "40МП, f/2.2, автофокус" },
+      { name: "Видео", value: "8K@24fps, 4K@60fps, HDR10+" }
     ]
   },
   {
-    category: "Battery",
+    category: "Батарея",
     items: [
-      { name: "Capacity", value: "5000mAh" },
-      { name: "Fast Charging", value: "45W wired, 15W wireless" },
-      { name: "Reverse Charging", value: "4.5W" },
-      { name: "Technology", value: "Intelligent Battery Management" },
-      { name: "Battery Life", value: "Up to 24 hours" }
+      { name: "Ёмкость", value: "5000мАч" },
+      { name: "Быстрая зарядка", value: "45Вт проводная, 15Вт беспроводная" },
+      { name: "Обратная зарядка", value: "4.5Вт" },
+      { name: "Технология", value: "Интеллектуальное управление батареей" },
+      { name: "Время работы", value: "До 24 часов" }
     ]
   }
 ];
@@ -79,13 +79,13 @@ const SpecsSection = () => {
       <div ref={sectionRef} className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block py-1 px-3 bg-white/10 text-white rounded-full text-sm font-medium mb-4">
-            Technical Details
+            Технические детали
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-            Precision Engineering Specifications
+            Точные инженерные характеристики
           </h2>
           <p className="text-gray-300 text-lg">
-            Explore the advanced specifications that power our flagship products.
+            Изучите продвинутые характеристики, которые используются в наших флагманских продуктах.
           </p>
         </div>
 

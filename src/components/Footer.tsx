@@ -11,7 +11,7 @@ const Footer = () => {
               <h3 className="text-2xl font-display font-bold text-samsung-black">SAMSUNG</h3>
             </a>
             <p className="text-samsung-gray max-w-md mb-6">
-              Samsung is a global technology leader dedicated to developing innovations that enrich people's lives and contribute to a better future.
+              Samsung – мировой лидер в области технологий, посвятивший себя разработке инноваций, которые обогащают жизнь людей и способствуют лучшему будущему.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-samsung-gray hover:text-samsung-blue hover:bg-white transition-colors duration-200 shadow-sm">
@@ -30,35 +30,35 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-lg font-medium text-samsung-black mb-5">Products</h4>
+            <h4 className="text-lg font-medium text-samsung-black mb-5">Продукты</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Smartphones</a></li>
-              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Tablets</a></li>
-              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Watches</a></li>
-              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">TVs</a></li>
-              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Home Appliances</a></li>
+              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Смартфоны</a></li>
+              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Планшеты</a></li>
+              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Часы</a></li>
+              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Телевизоры</a></li>
+              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Бытовая техника</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-medium text-samsung-black mb-5">Support</h4>
+            <h4 className="text-lg font-medium text-samsung-black mb-5">Поддержка</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Contact Us</a></li>
-              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">FAQs</a></li>
-              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Manuals</a></li>
-              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Service Centers</a></li>
-              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Warranty</a></li>
+              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Связаться с нами</a></li>
+              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Частые вопросы</a></li>
+              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Руководства</a></li>
+              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Сервисные центры</a></li>
+              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Гарантия</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-medium text-samsung-black mb-5">Company</h4>
+            <h4 className="text-lg font-medium text-samsung-black mb-5">Компания</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">About Us</a></li>
-              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Careers</a></li>
-              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">News</a></li>
-              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Sustainability</a></li>
-              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Investors</a></li>
+              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">О нас</a></li>
+              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Карьера</a></li>
+              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Новости</a></li>
+              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Устойчивое развитие</a></li>
+              <li><a href="#" className="text-samsung-gray hover:text-samsung-blue transition-colors duration-200">Инвесторам</a></li>
             </ul>
           </div>
         </div>
@@ -66,14 +66,14 @@ const Footer = () => {
         <div className="pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-samsung-gray order-2 md:order-1 mt-4 md:mt-0">
-              &copy; {new Date().getFullYear()} Samsung Electronics Co., Ltd. All Rights Reserved.
+              &copy; {new Date().getFullYear()} Samsung Electronics Co., Ltd. Все права защищены.
             </p>
             
             <div className="flex flex-wrap justify-center md:justify-end gap-4 text-sm text-samsung-gray order-1 md:order-2">
-              <a href="#" className="hover:text-samsung-blue transition-colors duration-200">Privacy Policy</a>
-              <a href="#" className="hover:text-samsung-blue transition-colors duration-200">Terms of Service</a>
-              <a href="#" className="hover:text-samsung-blue transition-colors duration-200">Cookie Policy</a>
-              <a href="#" className="hover:text-samsung-blue transition-colors duration-200">Accessibility</a>
+              <a href="#" className="hover:text-samsung-blue transition-colors duration-200">Политика конфиденциальности</a>
+              <a href="#" className="hover:text-samsung-blue transition-colors duration-200">Условия использования</a>
+              <a href="#" className="hover:text-samsung-blue transition-colors duration-200">Политика cookies</a>
+              <a href="#" className="hover:text-samsung-blue transition-colors duration-200">Доступность</a>
             </div>
           </div>
         </div>

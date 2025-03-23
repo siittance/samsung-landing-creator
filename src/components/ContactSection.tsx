@@ -42,13 +42,13 @@ const ContactSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
             <div className="lg:col-span-3">
               <span className="inline-block py-1 px-3 bg-samsung-blue/10 text-samsung-blue rounded-full text-sm font-medium mb-4">
-                Stay Connected
+                Оставайтесь на связи
               </span>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-samsung-black mb-6">
-                Get Updates on Latest Products
+                Получайте обновления о новых продуктах
               </h2>
               <p className="text-samsung-gray text-lg mb-8 max-w-xl">
-                Join our newsletter to receive product announcements, exclusive offers, and technology insights directly to your inbox.
+                Подпишитесь на нашу рассылку, чтобы получать анонсы продуктов, эксклюзивные предложения и технологические новости прямо на вашу электронную почту.
               </p>
               
               <form onSubmit={handleSubmit} className="space-y-6 max-w-xl">
@@ -64,7 +64,7 @@ const ContactSection = () => {
                   
                   <input
                     type="email"
-                    placeholder="Enter your email address"
+                    placeholder="Введите ваш email адрес"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     onFocus={() => setIsFocused(true)}
@@ -84,12 +84,12 @@ const ContactSection = () => {
                     )}
                   >
                     {isSubmitting ? (
-                      "Sending..."
+                      "Отправка..."
                     ) : isSuccess ? (
-                      "Subscribed!"
+                      "Подписано!"
                     ) : (
                       <>
-                        Subscribe
+                        Подписаться
                         <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
                       </>
                     )}
@@ -97,28 +97,28 @@ const ContactSection = () => {
                 </div>
                 
                 <p className="text-xs text-samsung-gray/70">
-                  By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
+                  Подписываясь, вы соглашаетесь с нашей Политикой конфиденциальности и даете согласие на получение обновлений от нашей компании.
                 </p>
               </form>
             </div>
             
             <div className="lg:col-span-2 bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
               <div className="text-center sm:text-left">
-                <h3 className="text-xl font-display font-bold text-samsung-black mb-6">Get In Touch</h3>
+                <h3 className="text-xl font-display font-bold text-samsung-black mb-6">Связаться с нами</h3>
                 
                 <div className="space-y-5">
                   <div>
-                    <h4 className="font-medium text-samsung-darkGray mb-1">Our Headquarters</h4>
-                    <p className="text-samsung-gray">Samsung Electronics Building, 129 Samsung-ro, Yeongtong-gu, Suwon-si, Gyeonggi-do, South Korea</p>
+                    <h4 className="font-medium text-samsung-darkGray mb-1">Наша штаб-квартира</h4>
+                    <p className="text-samsung-gray">Здание Samsung Electronics, 129 Samsung-ro, Yeongtong-gu, Suwon-si, Gyeonggi-do, Южная Корея</p>
                   </div>
                   
                   <div>
-                    <h4 className="font-medium text-samsung-darkGray mb-1">Email Us</h4>
+                    <h4 className="font-medium text-samsung-darkGray mb-1">Напишите нам</h4>
                     <a href="mailto:info@samsung.com" className="text-samsung-blue hover:underline">info@samsung.com</a>
                   </div>
                   
                   <div>
-                    <h4 className="font-medium text-samsung-darkGray mb-1">Call Us</h4>
+                    <h4 className="font-medium text-samsung-darkGray mb-1">Позвоните нам</h4>
                     <a href="tel:+18005267663" className="text-samsung-blue hover:underline">+1 800-SAMSUNG</a>
                   </div>
                 </div>

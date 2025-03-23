@@ -44,19 +44,19 @@ const HeroSection = () => {
             <span 
               className={`inline-block py-1 px-3 bg-samsung-blue/10 text-samsung-blue rounded-full text-sm font-medium mb-6 transition-all duration-700 delay-[100ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             >
-              Next Generation Technology
+              Технологии нового поколения
             </span>
             
             <h1 
               className={`text-4xl sm:text-5xl md:text-6xl font-display font-bold leading-tight text-samsung-black mb-6 transition-all duration-700 delay-[200ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             >
-              Innovation at <br />Your Fingertips
+              Инновации на <br />кончиках пальцев
             </h1>
             
             <p 
               className={`text-lg text-samsung-gray max-w-xl mb-8 transition-all duration-700 delay-[300ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             >
-              Experience the future today with cutting-edge technology that transforms the way you live, work, and play. Discover what's possible.
+              Ощутите будущее уже сегодня благодаря передовым технологиям, которые меняют способ вашей жизни, работы и развлечений. Откройте для себя новые возможности.
             </p>
             
             <div 
@@ -66,7 +66,7 @@ const HeroSection = () => {
                 href="#products" 
                 className="px-8 py-4 bg-samsung-blue text-white font-medium rounded-full hover:bg-samsung-blue/90 transition-all duration-200 text-center flex items-center justify-center gap-2 group"
               >
-                Explore Products
+                Наши продукты
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-200" />
               </a>
               
@@ -74,7 +74,7 @@ const HeroSection = () => {
                 href="#features" 
                 className="px-8 py-4 border border-samsung-blue/30 text-samsung-blue font-medium rounded-full hover:bg-samsung-blue/5 transition-all duration-200 text-center"
               >
-                Learn More
+                Узнать больше
               </a>
             </div>
           </div>
@@ -85,7 +85,7 @@ const HeroSection = () => {
             >
               <AnimatedImage 
                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=2000"
-                alt="Samsung smartphone with innovative features" 
+                alt="Смартфон Samsung с инновационными функциями" 
                 className="rounded-3xl shadow-2xl"
                 aspectRatio="video"
                 priority={true}
@@ -94,8 +94,8 @@ const HeroSection = () => {
               
               {/* Floating card */}
               <div className="absolute -bottom-6 -left-6 glass-card rounded-2xl p-5 shadow-lg max-w-xs animate-float">
-                <h3 className="text-samsung-black font-semibold mb-2">Ultra HD Display</h3>
-                <p className="text-samsung-gray text-sm">Experience true-to-life colors and incredible detail with our cutting-edge display technology.</p>
+                <h3 className="text-samsung-black font-semibold mb-2">Ультра HD Дисплей</h3>
+                <p className="text-samsung-gray text-sm">Ощутите естественные цвета и невероятную детализацию благодаря нашей передовой технологии дисплея.</p>
               </div>
             </div>
           </div>

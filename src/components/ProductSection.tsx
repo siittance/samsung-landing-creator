@@ -6,27 +6,27 @@ import { Smartphone, Monitor, Tv } from 'lucide-react';
 const products = [
   {
     id: 1,
-    title: "Galaxy S Series",
-    description: "Our flagship smartphones with cutting-edge technology and premium design.",
+    title: "Серия Galaxy S",
+    description: "Наши флагманские смартфоны с передовыми технологиями и премиальным дизайном.",
     image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
     icon: Smartphone,
-    features: ["Dynamic AMOLED 2X", "Pro-grade Camera", "All-day Battery", "5G Connectivity"]
+    features: ["Динамический AMOLED 2X", "Профессиональная камера", "Батарея на весь день", "Подключение 5G"]
   },
   {
     id: 2,
-    title: "Smart Monitors",
-    description: "Connect your world with intelligent displays designed for productivity and entertainment.",
+    title: "Умные мониторы",
+    description: "Объедините свой мир с интеллектуальными дисплеями, созданными для продуктивности и развлечений.",
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
     icon: Monitor,
-    features: ["4K UHD Resolution", "Smart TV Platform", "Adaptive Picture", "USB-C Connectivity"]
+    features: ["Разрешение 4K UHD", "Платформа Smart TV", "Адаптивное изображение", "Подключение USB-C"]
   },
   {
     id: 3,
-    title: "Neo QLED TVs",
-    description: "Revolutionary viewing experience with Quantum Matrix Technology and Neo Quantum Processor.",
+    title: "Neo QLED телевизоры",
+    description: "Революционный опыт просмотра с технологией Quantum Matrix и процессором Neo Quantum.",
     image: "https://images.unsplash.com/photo-1593305841991-05c297ba4575?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
     icon: Tv,
-    features: ["Quantum HDR", "Anti-Reflection", "Object Tracking Sound", "Gaming Hub"]
+    features: ["Quantum HDR", "Антибликовое покрытие", "Объемный звук", "Игровой хаб"]
   }
 ];
 
@@ -38,13 +38,13 @@ const ProductSection = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block py-1 px-3 bg-samsung-blue/10 text-samsung-blue rounded-full text-sm font-medium mb-4">
-            Our Product Range
+            Наш ассортимент продуктов
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-samsung-black mb-6">
-            Cutting-edge Technology Products
+            Передовые технологические продукты
           </h2>
           <p className="text-samsung-gray text-lg">
-            Discover our innovative product lineup designed to enhance every aspect of your digital life.
+            Откройте для себя наш инновационный ассортимент продуктов, созданных для улучшения каждого аспекта вашей цифровой жизни.
           </p>
         </div>
 

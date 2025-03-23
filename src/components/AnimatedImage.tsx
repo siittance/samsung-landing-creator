@@ -62,13 +62,13 @@ const AnimatedImage = ({
     portrait: "aspect-[3/4]"
   }[aspectRatio];
 
-  // Determine animation class
-  const animationClass = {
-    fade: "opacity-0 animate-fade-in",
-    zoom: "opacity-0 scale-95 animate-zoom-in",
-    slide: "opacity-0 translate-y-4 animate-slide-up",
+  // Determine animation class - removed animation for first load to avoid flickering
+  const animationClass = isInView ? {
+    fade: "animate-fade-in",
+    zoom: "scale-95 animate-zoom-in",
+    slide: "translate-y-4 animate-slide-up",
     none: ""
-  }[animation];
+  }[animation] : "";
 
   return (
     <div 
@@ -97,8 +97,8 @@ const AnimatedImage = ({
         }}
         className={cn(
           "w-full h-full object-cover backface-hidden",
-          isLoaded ? "opacity-100" : "opacity-0",
-          isInView && animationClass,
+          isLoaded ? "opacity-100" : "opacity-0", 
+          animationClass,
           "transition-opacity duration-300"
         )}
       />

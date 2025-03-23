@@ -11,37 +11,37 @@ const FeatureSection = () => {
   const features = [
     {
       id: 0,
-      title: "Innovative Design",
-      description: "Sleek, modern aesthetics combined with ergonomic design principles for products that look as good as they perform.",
+      title: "Инновационный дизайн",
+      description: "Элегантная, современная эстетика в сочетании с эргономичными принципами дизайна для продуктов, которые выглядят так же хорошо, как и работают.",
       benefits: [
-        "Premium materials and craftsmanship",
-        "User-centric design approach",
-        "Award-winning industrial design",
-        "Sustainable manufacturing practices"
+        "Премиальные материалы и мастерство",
+        "Дизайн, ориентированный на пользователя",
+        "Отмеченный наградами промышленный дизайн",
+        "Экологичные производственные практики"
       ],
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200"
     },
     {
       id: 1,
-      title: "Performance Excellence",
-      description: "Cutting-edge processors and components deliver exceptional speed and reliability for all your digital needs.",
+      title: "Превосходная производительность",
+      description: "Передовые процессоры и компоненты обеспечивают исключительную скорость и надежность для всех ваших цифровых потребностей.",
       benefits: [
-        "State-of-the-art processing power",
-        "Advanced thermal management",
-        "Optimized power efficiency",
-        "AI-enhanced performance"
+        "Современная вычислительная мощность",
+        "Продвинутое управление температурой",
+        "Оптимизированная энергоэффективность",
+        "Производительность с ИИ-улучшениями"
       ],
       image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200"
     },
     {
       id: 2,
-      title: "Ecosystem Integration",
-      description: "Seamless connectivity between devices creates a unified experience across your entire digital environment.",
+      title: "Интеграция экосистемы",
+      description: "Бесшовное соединение между устройствами создает единый опыт во всей вашей цифровой среде.",
       benefits: [
-        "Cross-device synchronization",
-        "Universal control features",
-        "Automatic device detection",
-        "Shared content and settings"
+        "Синхронизация между устройствами",
+        "Функции универсального управления",
+        "Автоматическое обнаружение устройств",
+        "Общий доступ к контенту и настройкам"
       ],
       image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200"
     }
@@ -78,13 +78,13 @@ const FeatureSection = () => {
       <div ref={sectionRef} className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block py-1 px-3 bg-samsung-blue/10 text-samsung-blue rounded-full text-sm font-medium mb-4">
-            Why Choose Us
+            Почему выбирают нас
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-samsung-black mb-6">
-            Advanced Features for Modern Life
+            Передовые функции для современной жизни
           </h2>
           <p className="text-samsung-gray text-lg">
-            Our technology is designed to enhance your everyday experiences with thoughtful innovation.
+            Наши технологии созданы для улучшения вашего повседневного опыта с помощью продуманных инноваций.
           </p>
         </div>
 

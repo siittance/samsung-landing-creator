@@ -4,11 +4,11 @@ import { cn } from "@/lib/utils";
 import { Menu, X } from 'lucide-react';
 
 const navItems = [
-  { name: "Home", href: "#" },
-  { name: "Products", href: "#products" },
-  { name: "Features", href: "#features" },
-  { name: "Specs", href: "#specs" },
-  { name: "Contact", href: "#contact" }
+  { name: "Главная", href: "#" },
+  { name: "Продукты", href: "#products" },
+  { name: "Особенности", href: "#features" },
+  { name: "Характеристики", href: "#specs" },
+  { name: "Контакты", href: "#contact" }
 ];
 
 const Navbar = () => {
@@ -51,7 +51,7 @@ const Navbar = () => {
             href="#contact"
             className="px-4 py-2 rounded-full bg-samsung-blue text-white text-sm font-medium hover:bg-opacity-90 transition-all duration-200"
           >
-            Get in Touch
+            Связаться с нами
           </a>
         </nav>
 
@@ -59,7 +59,7 @@ const Navbar = () => {
         <button
           className="md:hidden text-samsung-black"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
+          aria-label="Переключить меню"
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -88,7 +88,7 @@ const Navbar = () => {
             className="w-full py-3 rounded-full bg-samsung-blue text-white text-center text-lg font-medium hover:bg-opacity-90 transition-all duration-200"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Get in Touch
+            Связаться с нами
           </a>
         </nav>
       </div>
